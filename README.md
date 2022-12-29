@@ -1,22 +1,42 @@
 ## What is this?
 
-Clerk + databases includes:
-* toucan
-* honeysql 
+This is a repository that demonstrates how to use Clojure libraries: Toucan, HoneySQL
+This repository uses Uses [Clerk](https://github.com/nextjournal/clerk) to show up as notebook.
 
-## How to run this for contrib?
 
-Uses [Clerk](https://github.com/nextjournal/clerk) to show up as notebook.
+## How to run this to contribute?
 
-Run `clj` in this directory, this will install all dependencies (from `deps.edn`)
+1. Install dependencies with `lein deps` 
+2. Ensure you have Calva installed on your VSCode
+3. Start Calva Leiningen project REPL
+4. Add this to this repository's `.vscode` into `settings.json`:
 
-Calva is required to start Clerk. Use the follow commands in vscode:
+```
+{
+    "calva.jackInEnv": {
+    },
+    "calva.customREPLCommandSnippets": [
+        {
+            "name": "Open in Clerk",
+            "key": "d",
+            "snippet": "(require '[nextjournal.clerk :refer [show!]]) (show! \"$file\")"
+        },
+        {
+            "name": "Start Clerk",
+            "key": "s",
+            "snippet": "(require '[nextjournal.clerk :refer [serve!]])  (serve! {:port 3755 :watch-paths [\"src/databases\"]})"
+        }
+    ],
+}
+```
+5. Press these keys: 
 
 ```
 control + option + space   - starts custom calva commands
   s -> start clerk
   d -> open current file in clerk
 ```
+6. Browse `http://localhost:3755` to see the live notebook
 
 ## How to get HTML?
 
