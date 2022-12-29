@@ -5,3 +5,4 @@ target
 .clerk/
 .lein-repl-history
 .nrepl-port
+.calva
