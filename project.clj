@@ -3,7 +3,11 @@
   :url ""
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [ring/ring-jetty-adapter "1.6.3"]
-                 [io.github.nextjournal/clerk "0.12.707"]]
+                 [io.github.nextjournal/clerk "0.12.707"]
+                 [com.github.seancorfield/honeysql "2.4.962"]
+                 [org.postgresql/postgresql "42.2.4"]
+                 [toucan "1.15.0"]
+                 [migratus "1.3.5"]]
   :ring {:handler server/app
          :init server/init}
   :main ^:skip-aot server
