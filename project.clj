@@ -7,12 +7,15 @@
                  [com.github.seancorfield/honeysql "2.4.962"]
                  [org.postgresql/postgresql "42.2.4"]
                  [toucan "1.15.0"]
-                 [migratus "1.3.5"]]
+                 [migratus "1.3.5"]
+                 [aero "1.1.6"]
+                 [org.clojure/tools.cli "1.0.206"]]
   :ring {:handler server/app
          :init server/init}
   :main ^:skip-aot server
   :uberjar-name "clerk+databases.jar"
-  :aliases {"make-docs" ["run" "-m" "make-docs"]}
+  :aliases {"make-docs" ["run" "-m" "make-docs"]
+            "migrate" ["run" "-m" "migrate"]}
   :profiles {:dev {:dependencies
                    [[javax.servlet/javax.servlet-api "3.1.0"]]
                    :plugins

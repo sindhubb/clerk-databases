@@ -1,0 +1,1 @@
+create table "pantry" (id serial PRIMARY KEY);
