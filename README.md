@@ -35,11 +35,13 @@ https://sindhubb.github.io/clerk-databases/
         {
             "name": "Start Clerk",
             "key": "s",
-            "snippet": "(require '[nextjournal.clerk :refer [serve!]])  (serve! {:port 3755 :watch-paths [\"src/databases\"]})"
+            "snippet": "(require '[nextjournal.clerk :refer [serve!]])  (serve! {:port <PORT> :watch-paths [\"src/databases\"]})"
         }
     ],
 }
 ```
+Remember to replace <PORT> with your desired port. 
+
 5. Press these keys: 
 
 ```
