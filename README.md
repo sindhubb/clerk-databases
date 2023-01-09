@@ -49,7 +49,7 @@ control + option + space   - starts custom calva commands
   s -> start clerk
   d -> open current file in clerk
 ```
-6. Browse `http://localhost:3755` to see the live notebook
+6. Browse `http://localhost:<PORT>` to see the live notebook
 
 ## How to get HTML?
 
